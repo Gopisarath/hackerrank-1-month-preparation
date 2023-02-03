@@ -1,0 +1,26 @@
+public static void plusMinus(List<Integer> arr) {
+    int n = arr.size();
+    int count1 = 0;
+    int count2 = 0;
+    int count3 = 0;
+    for(int i=0;i<n;i++){
+        if(arr.get(i)<0){
+            count1+=1;
+        }
+        else if(arr.get(i)>0){
+            count2+=1;
+        }
+        else{
+            count3+=1;
+        }
+        
+    }
+    float count = count1+count2+count3;
+    System.out.format("%.6f\n",count2/count);
+    System.out.format("%.6f\n",count1/count);
+    System.out.format("%.6f\n",count3/count);
+    
+
+    }
+
+}
