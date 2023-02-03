@@ -1,0 +1,41 @@
+public static String timeConversion(String s) {
+         int n = s.length();
+        int hour = Integer.parseInt(s.substring(0,2));
+        String sub1 = s.substring(2,n-2);
+        String sub2 = s.substring(n-2);
+        if(sub2.equals("PM")){
+            
+            if(hour<12){
+                hour =hour+12;
+                String k = Integer.toString(hour);
+                return k+sub1;
+            }
+            else{
+                return s.substring(0,n-2);
+            }
+            
+        
+        }
+            
+            
+        else{
+            
+            if(hour<12){
+                return s.substring(0,n-2);
+            }
+            else{
+                hour-=12;
+                String k = Integer.toString(hour);
+                if(hour<10){
+                    k=k+"0";
+                }
+                return k+sub1;
+            }
+                
+                
+        }
+        
+        }
+    }
+    
+
