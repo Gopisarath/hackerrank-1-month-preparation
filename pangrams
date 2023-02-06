@@ -1,0 +1,20 @@
+class Result{
+
+    public static String pangrams(String s) {
+    String a = s.replace(" ","");
+    String d = a.toLowerCase();
+    int k = a.length();
+    HashSet<String> set = new HashSet<>();
+    for(int i=0;i<k;i++){
+        String b = String.valueOf(d.charAt(i));
+        set.add(b);
+        
+    }
+    if(set.size()==26){
+        return "pangram";
+    }
+    return "not pangram";
+
+    }
+
+}
