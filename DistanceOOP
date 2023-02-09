@@ -1,0 +1,29 @@
+abstract class Distance {
+    protected int feet;
+    protected float inches;
+    abstract public void setFeetAndInches(int feet, float inches);
+    abstract public int getFeet();
+    abstract public float getInches();
+    abstract String getDistanceComparison(Distance dist2);
+}
+class DistanceImplementation extends Distance{
+    public void setFeetAndInches(int feet, float inches){
+        this.feet = feet;
+        this.inches = inches;
+    }
+    public int getFeet(){
+        return feet;
+    }
+    public float getInches(){
+        return inches;
+    }
+    public String getDistanceComparison(Distance dist2){
+        if((feet*12+inches)>dist2.feet*12+dist2.inches){
+            return "First distance is greater.";
+        }
+        else if((feet*12+inches)<dist2.feet*12+dist2.inches){
+            return "Second distance is greater.";
+        }
+        return "Both distances are equal.";
+    } 
+}
