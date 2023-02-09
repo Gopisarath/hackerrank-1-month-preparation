@@ -1,0 +1,42 @@
+class BankAccount{
+    private static int total;
+    private double deposit;
+    private double w;
+    private String  Accnum;
+    private String name;
+    private String m;
+    private static double amt;
+    public BankAccount(String Accnum,String name){
+        this.Accnum=Accnum;
+        this.name=name;
+    }
+    public void check(String m,int amt){
+        if(m.equals("Deposit")){
+            total+=amt;
+        }
+        if(m.equals("Withdraw")){
+            if(amt>total){
+                System.out.println("Negative Balance Transaction Cancelled");
+            }
+            else{
+                total-=amt;
+            }
+        }
+        
+    }
+    public String getAccnum()
+    {
+        return Accnum;
+    }
+    public String getname(){
+        return name;
+    }
+    public int gettotal(){
+        return total;
+    }
+    public void display(){
+        System.out.println(Accnum+" "+name+" "+total);
+    }
+    
+    
+}
