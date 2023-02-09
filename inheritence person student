@@ -1,0 +1,33 @@
+class grade
+{
+    int[] mark;
+    String []arr;
+    public grade(int [] a,String [] b)
+    {
+         this.mark=a;
+         this.arr=b;       
+    }
+    public void printname()
+    {
+        System.out.println("Name: "+arr[1]+", "+arr[0]);
+        System.out.println("ID: "+arr[2]);
+        int sum=0;
+        for (int i=0;i<mark.length;i++ )
+        {
+            sum+=mark[i];
+        }
+        int avg=sum/mark.length;
+        if (avg>=90 && avg<=100)
+            System.out.println("Grade: O");
+        else if (avg>=80 && avg<90)
+            System.out.println("Grade: E");
+        else if (avg>=70 && avg<80)
+            System.out.println("Grade: A");
+        else if (avg>=55 && avg<70)
+            System.out.println("Grade: P");
+        else if (avg>=40 && avg<55)
+            System.out.println("Grade: D");
+        else if (avg<40)
+            System.out.println("Grade: T");    
+    }
+}
